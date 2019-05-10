@@ -63,6 +63,10 @@ RCT_EXPORT_METHOD(setup:(NSDictionary *)param){
     }
 
   }
+  // 新增渠道统计
+if(param[@"channel"]){
+    config.channel = param[@"channel"];
+}
   [JANALYTICSService setupWithConfig:config];
 }
 
